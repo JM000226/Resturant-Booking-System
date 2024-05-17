@@ -9,9 +9,9 @@ import SwiftUI
 
 struct ThirdView: View {
     @ObservedObject var reservationViewModel: ReservationViewModel
-    @State private var navigateToFourthView = false // Manages navigation to the Fourth View
+    @State private var navigateToFourthView = false // Controls navigation to the Fourth View
     @State private var isActive = false // Manages whether FourthView is active or not
-    @State private var showingError = false // Manages the visibility of error messages
+    @State private var showingError = false // Controls the display of error messages
     @State private var errorMessage = "" // Stores the error message text
 
     var body: some View {
@@ -49,6 +49,10 @@ struct ThirdView: View {
     private var form: some View {
         Group {
             Group {
+                Text("Selected Store Location: ").bold()
+                + Text(reservationViewModel.selectedStoreLocation?.title ?? "Not selected")
+            }
+            Group {
                 Text("Selected Date: ").bold()
                 + Text("\(formattedDate(reservationViewModel.selectedDate))")
             }
@@ -64,7 +68,6 @@ struct ThirdView: View {
                 Text("Number of Guests: ").bold()
                 + Text("\(reservationViewModel.numberOfGuests)")
             }
-            .padding()
             
             if showingError {
                 Text(errorMessage)
@@ -79,6 +82,9 @@ struct ThirdView: View {
                 .padding()
                 .textFieldStyle(RoundedBorderTextFieldStyle())
             TextField("Email", text: $reservationViewModel.email)
+                .padding()
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+            TextField("Memo (Optional)", text: $reservationViewModel.memo)
                 .padding()
                 .textFieldStyle(RoundedBorderTextFieldStyle())
             
@@ -132,5 +138,3 @@ struct ThirdView_Previews: PreviewProvider {
         ThirdView(reservationViewModel: ReservationViewModel())
     }
 }
-
-

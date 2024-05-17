@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// Tracks navigation state changes across the app.
 class NavigationController: ObservableObject {
     @Published var isActive: Bool = false
 }

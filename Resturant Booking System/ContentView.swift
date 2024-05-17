@@ -11,12 +11,13 @@ struct ContentView: View {
     @ObservedObject var viewModel: ReservationViewModel
 
     var body: some View {
-        NavigationView { 
-            VStack(alignment: .leading, spacing: 20.0) {
+        VStack(alignment: .leading, spacing: 20.0) {
+            ScrollView {
                 Image("Betty's Image")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .cornerRadius(15)
+                    .padding(.horizontal, 20)
 
                 HStack {
                     Text("Betty's Burgers")
@@ -37,10 +38,12 @@ struct ContentView: View {
                         .foregroundColor(.blue)
                         .font(.caption)
                     }
-                }
+                }.padding(.horizontal, 20)
+
                 Text("Looking for Fresh and Tasty Burgers?")
                     .font(.headline)
                     .foregroundColor(Color(hue: 0.132, saturation: 0.61, brightness: 0.981))
+                    .padding(.horizontal, 20)
 
                 HStack {
                     Spacer()
@@ -48,17 +51,16 @@ struct ContentView: View {
                 }
                 .foregroundColor(.blue)
                 .font(.caption)
-
+                .padding(.horizontal, 20)
+                
                 VStack {
-                    NavigationLink(destination: SecondView(reservationViewModel: viewModel)
-                        .padding(1.0)) {
+                    NavigationLink(destination: FirstView(viewModel: viewModel)) {
                         Text("Book Now!")
                             .foregroundColor(.white)
                             .padding()
-                            .background(Color.pink)
+                            .background(Color.green)
                             .cornerRadius(10)
                     }
-
                     NavigationLink(destination: ManageBookingView(viewModel: viewModel)) {
                         Text("Manage Booking")
                             .foregroundColor(.white)
@@ -66,11 +68,11 @@ struct ContentView: View {
                             .background(Color.blue)
                             .cornerRadius(10)
                     }
-                }
+                }.padding(.horizontal, 20)
             }
-            
-            .padding()
-        } 
+        }
+        .navigationBarTitle("Betty's Burgers", displayMode: .inline)
+        .padding(.top, 10)
     }
 }
 
@@ -79,7 +81,4 @@ struct ContentView_Previews: PreviewProvider {
         ContentView(viewModel: ReservationViewModel())
     }
 }
-
-
-
 

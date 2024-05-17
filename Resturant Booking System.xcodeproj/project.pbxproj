@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04FAA8F22BF74BBC005D01C9 /* FirstView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FAA8F12BF74BBC005D01C9 /* FirstView.swift */; };
+		04FAA8F42BF74CCF005D01C9 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FAA8F32BF74CCF005D01C9 /* LocationManager.swift */; };
+		04FAA8F62BF74D15005D01C9 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FAA8F52BF74D15005D01C9 /* MapView.swift */; };
+		04FAA8F82BF74DBA005D01C9 /* RestaurantLocations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FAA8F72BF74DBA005D01C9 /* RestaurantLocations.swift */; };
 		375738392BF1209100EFF952 /* Resturant_Booking_SystemApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375738382BF1209100EFF952 /* Resturant_Booking_SystemApp.swift */; };
 		3757383D2BF1209400EFF952 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3757383C2BF1209400EFF952 /* Assets.xcassets */; };
 		375738402BF1209400EFF952 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3757383F2BF1209400EFF952 /* Preview Assets.xcassets */; };
@@ -21,6 +25,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04FAA8F12BF74BBC005D01C9 /* FirstView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstView.swift; sourceTree = "<group>"; };
+		04FAA8F32BF74CCF005D01C9 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		04FAA8F52BF74D15005D01C9 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		04FAA8F72BF74DBA005D01C9 /* RestaurantLocations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantLocations.swift; sourceTree = "<group>"; };
 		375738352BF1209100EFF952 /* Resturant Booking System.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Resturant Booking System.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		375738382BF1209100EFF952 /* Resturant_Booking_SystemApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resturant_Booking_SystemApp.swift; sourceTree = "<group>"; };
 		3757383C2BF1209400EFF952 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -71,9 +79,13 @@
 				375738462BF120CB00EFF952 /* Reservation.swift */,
 				375738482BF120E300EFF952 /* ReservationViewModel.swift .swift */,
 				3757384A2BF1210F00EFF952 /* ContentView.swift */,
+				04FAA8F72BF74DBA005D01C9 /* RestaurantLocations.swift */,
 				3757384C2BF1212200EFF952 /* SecondView.swift */,
+				04FAA8F12BF74BBC005D01C9 /* FirstView.swift */,
 				3757384E2BF1213400EFF952 /* ThirdView.swift */,
 				375738502BF1214300EFF952 /* FourthView.swift */,
+				04FAA8F52BF74D15005D01C9 /* MapView.swift */,
+				04FAA8F32BF74CCF005D01C9 /* LocationManager.swift */,
 				375738522BF1215900EFF952 /* ManageBookingView.swift */,
 				3757383E2BF1209400EFF952 /* Preview Content */,
 			);
@@ -159,12 +171,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				375738492BF120E300EFF952 /* ReservationViewModel.swift .swift in Sources */,
+				04FAA8F62BF74D15005D01C9 /* MapView.swift in Sources */,
+				04FAA8F22BF74BBC005D01C9 /* FirstView.swift in Sources */,
 				3757384D2BF1212200EFF952 /* SecondView.swift in Sources */,
+				04FAA8F42BF74CCF005D01C9 /* LocationManager.swift in Sources */,
 				375738472BF120CB00EFF952 /* Reservation.swift in Sources */,
 				3757384B2BF1210F00EFF952 /* ContentView.swift in Sources */,
 				3760C35E2BF19B91004454A5 /* NavigationController.swift in Sources */,
 				375738512BF1214300EFF952 /* FourthView.swift in Sources */,
 				3757384F2BF1213400EFF952 /* ThirdView.swift in Sources */,
+				04FAA8F82BF74DBA005D01C9 /* RestaurantLocations.swift in Sources */,
 				375738392BF1209100EFF952 /* Resturant_Booking_SystemApp.swift in Sources */,
 				375738532BF1215900EFF952 /* ManageBookingView.swift in Sources */,
 			);
@@ -300,7 +316,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Resturant Booking System/Preview Content\"";
-				DEVELOPMENT_TEAM = YZ22Z54XW9;
+				DEVELOPMENT_TEAM = 35UTWL4VHL;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -329,7 +345,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Resturant Booking System/Preview Content\"";
-				DEVELOPMENT_TEAM = YZ22Z54XW9;
+				DEVELOPMENT_TEAM = 35UTWL4VHL;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

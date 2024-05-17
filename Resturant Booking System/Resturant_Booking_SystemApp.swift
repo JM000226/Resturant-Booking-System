@@ -13,9 +13,10 @@ struct Resturant_Booking_SystemApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView(viewModel: ReservationViewModel())  // Adjusted to accept a viewModel
-                .environmentObject(navigation)
+            NavigationView {
+                ContentView(viewModel: ReservationViewModel())  // Adjusted to accept a viewModel
+                    .environmentObject(navigation)
+            }
         }
     }
 }
-

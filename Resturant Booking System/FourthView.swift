@@ -46,10 +46,10 @@ struct FourthView: View {
     }
 }
             
-    struct FourthView_Previews: PreviewProvider {
-                static var previews: some View {
-                    let viewModel = ReservationViewModel()
-                    FourthView(viewModel: viewModel)
-                        .environmentObject(NavigationController())  
+struct FourthView_Previews: PreviewProvider {
+    static var previews: some View {
+        let viewModel = ReservationViewModel()
+        FourthView(viewModel: viewModel)
+            .environmentObject(NavigationController())
     }
 }
